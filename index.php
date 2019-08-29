@@ -1,19 +1,7 @@
 <?php
     require 'db.php';
 
-//     if ($_SERVER['REQUEST_METHOD'] === 'GET'){
-        
-//         $name = $_POST['name'];
-//         $surname = $_POST['surname'];
-        
-//         if($name == ''){
-//             echo 'Введите имя и фамилию!';
-//         }
 
-//         else{
-    
-//         $array= $pdo->prepare("INSERT INTO list (name, surname) VALUES (?,?)");
-//         $array->execute([$name, $surname]);
         
          $result = $pdo->prepare("SELECT id, name, surname FROM list");
          $result->execute();
